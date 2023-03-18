@@ -31,14 +31,15 @@ local Section1 = Tab1:NewSection("Main")
 
 local Label1 = Tab1:NewLabel("< Get Roles (Paid) >", "center")--"left", "center", "right"
 
-local Selector1 = Tab1:NewSelector("Selector 1", "bungie", {"Gun", "SwatGun"}, function(d)
-game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole:FireServer(d, true)
-end)
-local Label1 = Tab1:NewLabel("< Get Roles (Free) >", "center")--"left", "center", "right"
+	local Selector1 = Tab1:NewSelector("Paid Roles", "bungie", {"Gun", "SwatGun"}, function(d)
+	game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole:FireServer(d, true)
+	end)
 
-			local Selector2 = Tab1:NewSelector("Paid Roles", "Click Here!", {"TeddyBloxpin", "Chips", "Bat", "MedKit", "Lollipop"}, function(d)
-game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole:FireServer(d, true)
-end)
+local Label2 = Tab1:NewLabel("< Get Roles (Free) >", "center")--"left", "center", "right"
+
+	local Selector2 = Tab1:NewSelector("Free Roles", "Click Here!", {"TeddyBloxpin", "Chips", "Bat", "MedKit", "Lollipop"}, function(f)
+	game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole:FireServer(f, true)
+	end)
 
 
 
