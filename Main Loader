@@ -1,0 +1,6 @@
+if game.PlaceId == 3851622790 then --Loader
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/johnny-sins162/Break-In-X/main/Loader"))()
+end
+if game.PlaceId == 4620170611 then --Game script
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/johnny-sins162/Break-In-X/main/Loader"))()
+end
