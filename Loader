@@ -1,7 +1,7 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Consistt/Ui/main/UnLeaked"))()
 
 
-library.rank = "Owner"
+library.rank = "Dev"
 local Wm = library:Watermark("Break In | v" .. library.version ..  " | " .. library:GetUsername() .. " | " .. library.rank)
 local FpsWm = Wm:AddWatermark("fps: " .. library.fps)
 coroutine.wrap(function()
@@ -14,23 +14,31 @@ end)()
 local Notif = library:InitNotifications()
 
 for i = 20,0,-1 do 
-    task.wait(123131)
-    local LoadingXSX = Notif:Notify("Loading xsx lib v2, please be patient.", 3, "information") -- notification, alert, error, success, information
+    task.wait(0.001)
+    local LoadingXSX = Notif:Notify("Loading...", 3, "information") -- notification, alert, error, success, information
 end 
 
-library.title = "Break In"
+library.title = "Break In (Dev Loader)"
 
 library:Introduction()
 wait(1)
 local Init = library:Init()
 
-local Tab1 = Init:NewTab("Roles")
+local Tab1 = Init:NewTab("Get Roles")
 
 local Section1 = Tab1:NewSection("Main")
 
-local Selector1 = Tab1:NewSelector("Role giver (Paid)", "Select Role", {"Gun", "SwatGun",}, function(d)
-    print(d)
-end):AddOption("fge")
+
+local Label1 = Tab1:NewLabel("< Get Roles (Paid) >", "center")--"left", "center", "right"
+
+local Selector1 = Tab1:NewSelector("Selector 1", "bungie", {"Gun", "SwatGun"}, function(d)
+game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole:FireServer(d, true)
+end)
+local Label1 = Tab1:NewLabel("< Get Roles (Free) >", "center")--"left", "center", "right"
+
+			local Selector2 = Tab1:NewSelector("Paid Roles", "Click Here!", {"TeddyBloxpin", "Chips", "Bat", "MedKit", "Lollipop"}, function(d)
+game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole:FireServer(d, true)
+end)
 
 
 
@@ -41,11 +49,7 @@ end):AddOption("fge")
 
 
 
-
-
-
-
-local FinishedLoading = Notif:Notify("Break In", 4, "Successful!")
+local FinishedLoading = Notif:Notify("Break In X loader", 4, "success")
 
 -- // FUNCTION DOCS: 
 --[[
