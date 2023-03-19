@@ -1,5 +1,5 @@
 --Main script
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Consistt/Ui/main/UnLeaked"))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/johnny-sins162/XSX/main/ui-by-junkies-alike-v3"))()
 
 
 library.rank = "Dev"
@@ -27,23 +27,60 @@ local Init = library:Init()
 
 local Tab1 = Init:NewTab("Create Items")
 
+local Section1 = Tab1:NewSection("Consumables")
+
 local Label1 = Tab1:NewLabel("< Create Items >", "center")--"left", "center", "right"
 
-local Selector1 = Tab1:NewSelector("Food giver", "Click Here!", {"Apple", "Chips", "Cookie", "BloxyCola", "Pizza3", "Lollipop"}, function(d)
+
+
+                                local Selector1 = Tab1:NewSelector("Food giver", "Click Here!", {"Apple", "Chips", "Cookie", "BloxyCola", "Pizza3", "Lollipop"}, function(d)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("GiveTool"):FireServer(d)
 end)
-local Label2 = Tab1:NewLabel("< Create Health Items >", "center")
 
+
+local Label2 = Tab1:NewLabel("< Create Health Items >", "center")
 	local Selector1 = Tab1:NewSelector("Health Items Giver", "Click Here!", {"Cure", "Medkit"}, function(f)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("GiveTool"):FireServer(f)
 end)
-local Label3 = Tab1:NewLabel("< Create Weapons >", "center")
+
+local Section1 = Tab1:NewSection("Weapons")
+
+local Label3 = Tab1:NewLabel("< Create Basic Weapons >", "center")
+local Selector2 = Tab1:NewSelector("Basic Weapons Giver", "Click Here!", {"Broom", "Breaker", "Bat", "Hammer", "Crowbar", "Pitchfork"}, function(q)
+    game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("BasementWeapon"):FireServer(true,q)
+end)    
+
+
+    local Label3 = Tab1:NewLabel("< Create Advanced Weapons >", "center")
+    local Selector3 = Tab1:NewSelector("Advanced Weapons Giver", "Click Here!", {"Gun", "SwatGun", "LinkedSword"}, function(q)
+        game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("BasementWeapon"):FireServer(true,q)
+end)    
+
+local Label3 = Tab1:NewLabel("< Misc Items Giver >", "center")
+local Selector4 = Tab1:NewSelector("Advanced Weapons Giver", "Click Here!", {"Plank", "SwatGun"}, function(q)
+    game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("BasementWeapon"):FireServer(true,q)
+end)    
+
+
+local Tab2 = Init:NewTab("Grab Items")
+local Label3 = Tab2:NewLabel("< Attic >", "center")
+
+                local Button1 = Tab2:NewButton("Grab Attic Item", function()
+    game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("BloxyPack"):FireServer(1)
+end)
+
+                local Label4 = Tab2:NewLabel("< Basement >", "center")
+local Selector5 = Tab2:NewSelector("Take Basement Items", "Click Here!", {"Bat", "Hammer", "Crowbar", "Pitchfork"}, function(q)
+    game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("BasementWeapon"):FireServer(true,q)
+end)    
 
 
 
 
-
-
+                local Label4 = Tab2:NewLabel("< Anywhere >", "center")
+local Button1 = Tab2:NewButton("Grab Latter", function()
+    game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("Ladder"):FireServer(1)
+end)
 
 local FinishedLoading = Notif:Notify("Loaded Break In X", 4, "success")
 
