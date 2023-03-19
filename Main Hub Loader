@@ -32,7 +32,7 @@ local Section1 = Tab1:NewSection("Main")
 
 local Label1 = Tab1:NewLabel("< Get Roles (Paid) >", "center")--"left", "center", "right"
 
-	local Selector1 = Tab1:NewSelector("Paid Roles", "bungie", {"Gun", "SwatGun"}, function(d)
+	local Selector1 = Tab1:NewSelector("Paid Roles", "Click Here!", {"Gun", "SwatGun"}, function(d)
 	game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole:FireServer(d, true)
 	end)
 
