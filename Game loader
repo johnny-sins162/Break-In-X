@@ -46,41 +46,27 @@ end)
 local Section1 = Tab1:NewSection("Weapons")
 
 local Label3 = Tab1:NewLabel("< Create Basic Weapons >", "center")
-local Selector2 = Tab1:NewSelector("Basic Weapons Giver", "Click Here!", {"Broom", "Breaker", "Bat", "Hammer", "Crowbar", "Pitchfork"}, function(q)
+local Selector1 = Tab1:NewSelector("Basic Weapons Giver", "Click Here!", {"Broom", "Breaker", "Bat", "Hammer", "Crowbar", "Pitchfork"}, function(q)
     game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("BasementWeapon"):FireServer(true,q)
 end)    
 
 
     local Label3 = Tab1:NewLabel("< Create Advanced Weapons >", "center")
-    local Selector3 = Tab1:NewSelector("Advanced Weapons Giver", "Click Here!", {"Gun", "SwatGun", "LinkedSword"}, function(q)
+    local Selector1 = Tab1:NewSelector("Advanced Weapons Giver", "Click Here!", {"Gun", "SwatGun"}, function(q)
         game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("BasementWeapon"):FireServer(true,q)
 end)    
 
 local Label3 = Tab1:NewLabel("< Misc Items Giver >", "center")
-local Selector4 = Tab1:NewSelector("Advanced Weapons Giver", "Click Here!", {"Plank", "SwatGun"}, function(q)
+local Selector1 = Tab1:NewSelector("Advanced Weapons Giver", "Click Here!", {"Planks", "SwatGun"}, function(q)
     game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("BasementWeapon"):FireServer(true,q)
 end)    
 
 
-local Tab2 = Init:NewTab("Grab Items")
-local Label3 = Tab2:NewLabel("< Attic >", "center")
-
-                local Button1 = Tab2:NewButton("Grab Attic Item", function()
-    game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("BloxyPack"):FireServer(1)
-end)
-
-                local Label4 = Tab2:NewLabel("< Basement >", "center")
-local Selector5 = Tab2:NewSelector("Take Basement Items", "Click Here!", {"Bat", "Hammer", "Crowbar", "Pitchfork"}, function(q)
-    game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("BasementWeapon"):FireServer(true,q)
-end)    
+local Tab2 = Init:NewTab("Abilities")
+local Label4 = Tab2:NewLabel("< Stealth ability >", "center")
 
 
 
-
-                local Label4 = Tab2:NewLabel("< Anywhere >", "center")
-local Button1 = Tab2:NewButton("Grab Latter", function()
-    game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("Ladder"):FireServer(1)
-end)
 
 local FinishedLoading = Notif:Notify("Loaded Break In X", 4, "success")
 
